@@ -1,8 +1,8 @@
-http://amazon.com/dp/B015NJEIDC
-http://amazon.com/dp/B000J4FSVS
-http://amazon.com/dp/B004H7GB9G
-http://amazon.com/dp/B001G7QVHW
-http://amazon.com/dp/B00IOZWC2M
-http://amazon.com/dp/B00CYA4RIK
-http://amazon.com/dp/B013TKEEMM
-http://amazon.com/dp/B00NMFUWHG
+B015NJEIDC
+B000J4FSVS
+B004H7GB9G
+B001G7QVHW
+B00IOZWC2M
+B00CYA4RIK
+B013TKEEMM
+B00NMFUWHG

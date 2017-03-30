@@ -53,7 +53,6 @@ def get_reviews():
             reviews = parser.xpath('//*[contains(@id, "customer_review")]')
             if not reviews:
                 print('No reviews found for', url)
-                urls.popleft()
             for review in reviews:
                 rating = review.xpath('.//i[@data-hook="review-star-rating"]//text()')[0]
                 title = review.xpath('.//a[@data-hook="review-title"]//text()')[0]

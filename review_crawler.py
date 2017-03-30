@@ -89,6 +89,8 @@ def get_reviews():
 
 
 def main():
+    if not os.path.exists('reviews'):
+        os.makedirs('reviews')
     asin_filename = sys.argv[1]
     supplement_name = asin_filename[6:-10]
     print(supplement_name)

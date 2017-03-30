@@ -16,6 +16,7 @@ class Review:
         self.body = body
         self.helpful = helpful
 
+url_queue_filename = 'queue.p'
 
 with open('useragent-strings.txt', 'r') as file:
     useragent_strings = file.read().split('\n')
@@ -37,7 +38,7 @@ def add_asin(asin):
     else:
         # There is only one page of reviews
         num_pages = 1
-    for i in range(num_pages):
+    for i in range(1, num_pages + 1):
         urls.append('https://www.amazon.com/product-reviews/' + asin + '?pageNumber=' + str(i))
 
 
@@ -51,11 +52,16 @@ def get_reviews():
             parser = html.fromstring(page.content)
             reviews = parser.xpath('//*[contains(@id, "customer_review")]')
             if not reviews:
-                raise ValueError('No reviews found on ' + url)
+                print('No reviews found for', url)
+                urls.popleft()
             for review in reviews:
                 rating = review.xpath('.//i[@data-hook="review-star-rating"]//text()')[0]
                 title = review.xpath('.//a[@data-hook="review-title"]//text()')[0]
-                body = review.xpath('.//span[@data-hook="review-body"]//text()')[0]
+                body = review.xpath('.//span[@data-hook="review-body"]//text()')
+                if body:
+                    body = body[0]
+                else:
+                    body = ''
                 helpful = review.xpath('.//span[@data-hook="helpful-vote-statement"]//text()')
                 if not helpful:
                     helpful = 0
@@ -69,6 +75,10 @@ def get_reviews():
             print('Got ', num_reviews, ' reviews')
             urls.popleft()
             reviews_list.extend(rl)
+        # Queue is empty, remove queue.p file
+        if os.path.exists(url_queue_filename):
+            os.remove(url_queue_filename)
+            print('Removed queue file')
     except:
         e = sys.exc_info()[0]
         print(e)
@@ -83,21 +93,20 @@ def main():
     supplement_name = asin_filename[6:-10]
     print(supplement_name)
     pkl_filename = 'reviews/' + supplement_name + '-reviews.p'
-    url_queue_filename = 'queue.p'
-
-    # Load reviews list
-    if os.path.exists(pkl_filename):
-        global reviews_list
-        with open(pkl_filename, 'rb') as pkl_file:
-            reviews_list = _pickle.load(pkl_file, encoding='latin1')
-        print('Loaded pkl file')
 
     # Load URL queue
     if os.path.exists(url_queue_filename):
         global urls
-        with open (url_queue_filename, 'rb') as url_queue_file:
+        with open(url_queue_filename, 'rb') as url_queue_file:
             urls = _pickle.load(url_queue_file, encoding='latin1')
         print('Loading ASIN queue')
+
+        # Load reviews list
+        if os.path.exists(pkl_filename):
+            global reviews_list
+            with open(pkl_filename, 'rb') as pkl_file:
+                reviews_list = _pickle.load(pkl_file, encoding='latin1')
+        print('Loaded pkl file')
     else:
         with open(asin_filename, 'r') as asin_file:
             for asin in asin_file:

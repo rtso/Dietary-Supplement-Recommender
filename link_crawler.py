@@ -44,7 +44,7 @@ def get_asins(read_filename, write_filename, line_index):
                 asin = page_tree.xpath('//*[@id="ftSelectAsin"]/@value')[0]
                 print(line_index)
                 print(asin)
-                write_file.write('http://amazon.com/dp/' + asin + '\n')
+                write_file.write(asin + '\n')
             except IndexError:
                 print('Stopped at index ', line_index)
                 return line_index

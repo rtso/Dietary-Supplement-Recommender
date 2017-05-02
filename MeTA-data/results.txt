@@ -2,7 +2,6 @@ C:\Users\Peter\Anaconda3\python.exe C:/Users/Peter/PycharmProjects/Dietary-Suppl
 
 Running queries...
 
-weak immune system
 1: echinacea
 2: kava-kava
 3: zinc
@@ -106,20 +105,20 @@ peripheral vascular disease
 5: black cohosh
 
 
+blindness
+1: saint john's wort
+2: coenzyme Q10
+3: pre-workout
+4: tumeric
+5: magnesium
+
+
 prostate cancer
 1: zinc
 2: multivitamins
 3: green-tea
 4: magnesium
 5: fish oil
-
-
-back pain
-1: tumeric
-2: glucosamine
-3: magnesium
-4: fish oil
-5: probiotics
 
 
 Process finished with exit code 0

@@ -1,0 +1,125 @@
+C:\Users\Peter\Anaconda3\python.exe C:/Users/Peter/PycharmProjects/Dietary-Supplement-Recommender/MeTA-data/search.py
+
+Running queries...
+
+weak immune system
+1: echinacea
+2: kava-kava
+3: zinc
+4: tumeric
+5: saint john's wort
+
+
+trouble sleeping at night
+1: melatonin
+2: valerian-root
+3: magnesium
+4: 5-htp
+5: l-theanine
+
+
+weight loss
+1: garcinia-cambogia
+2: green-tea
+3: meal replacement drink
+4: biotin
+5: 5-htp
+
+
+heart failure
+1: coenzyme Q10
+2: taurine
+3: pre-workout
+4: bcaa
+5: grape-seed-extract
+
+
+ejection fraction
+1: coenzyme Q10
+2: grape-seed-extract
+3: taurine
+4: magnesium
+5: hair vitamins
+
+
+chest pains palpitations
+1: magnesium
+2: rhodiola
+3: l-theanine
+4: garcinia-cambogia
+5: zinc
+
+
+anxiety
+1: l-theanine
+2: kava-kava
+3: 5-htp
+4: valerian-root
+5: rhodiola
+
+
+ringing in ears
+1: melatonin
+2: green-tea
+3: echinacea
+4: zinc
+5: tumeric
+
+
+erectile dysfunction
+1: ginseng
+2: caffeine
+3: iron
+4: coenzyme Q10
+5: fish oil
+
+
+major depression
+1: 5-htp
+2: saint john's wort
+3: rhodiola
+4: l-theanine
+5: kava-kava
+
+
+chronic fatigue syndrome
+1: magnesium
+2: iron
+3: vitamin-b12
+4: 5-htp
+5: tumeric
+
+
+menstrual cramps
+1: black cohosh
+2: saint john's wort
+3: kava-kava
+4: iron
+5: magnesium
+
+
+peripheral vascular disease
+1: magnesium
+2: tumeric
+3: creatine
+4: pre-workout
+5: black cohosh
+
+
+prostate cancer
+1: zinc
+2: multivitamins
+3: green-tea
+4: magnesium
+5: fish oil
+
+
+back pain
+1: tumeric
+2: glucosamine
+3: magnesium
+4: fish oil
+5: probiotics
+
+
+Process finished with exit code 0

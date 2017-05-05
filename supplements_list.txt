@@ -2,26 +2,26 @@
 b-complex
 bcaa
 biotin
-black-cohosh
+black cohosh
 calcium
-coq10
+coenzyme Q10
 creatine
-dark-chocolate
+dark chocolate
 echinacea
-energy
-fish-oil
+caffeine
+fish oil
 garcinia-cambogia
 ginseng
 glucosamine
 glutamine
 grape-seed-extract
 green-tea
-hair-vitamins
-iron-supplement
+hair vitamins
+iron
 kava-kava
 l-theanine
 magnesium
-meal-replacements
+meal replacement drink
 melatonin
 multivitamins
 pre-workout
@@ -30,9 +30,9 @@ probiotics
 protein-bars
 protein
 rhodiola
-saint-johns-wort
+saint john's wort
 taurine
-tumeric-supplement
+tumeric
 valerian-root
 vitamin-b12
 vitamin-b6

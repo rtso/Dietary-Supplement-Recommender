@@ -15,6 +15,6 @@ for q in queries:
     query.content(q)
     top_docs = ranker.score(idx, query, num_results=5)
     for i, doc in enumerate(top_docs):
-        print(str(i + 1) + ': ' + str(supplements[doc[0]]) + ' ', end='')
+        print(str(i + 1) + ': ' + str(supplements[doc[0]]))
     print()
     print()

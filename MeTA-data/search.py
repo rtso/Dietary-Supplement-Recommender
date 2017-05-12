@@ -1,7 +1,7 @@
 import metapy
 
 idx = metapy.index.make_inverted_index('config.toml')
-ranker = metapy.index.OkapiBM25()
+ranker = metapy.index.DirichletPrior()
 queries = []
 query_fd = open('../queries_2.txt','r')
 queries = query_fd.read().split('\n')[0:-1]
@@ -17,4 +17,15 @@ for q in queries:
     for i, doc in enumerate(top_docs):
         print(str(i + 1) + ': ' + str(supplements[doc[0]]))
     print()
-    print()
+
+ev = metapy.index.IREval('config.toml')
+
+num_results = 10
+with open('queries.txt') as query_file:
+    for query_num, line in enumerate(query_file):
+        query.content(line.strip())
+        results = ranker.score(idx, query, num_results)
+        avg_p = ev.avg_p(results, query_num, num_results)
+        print("Query {} average precision: {}".format(query_num + 1, avg_p))
+
+print(ev.map())

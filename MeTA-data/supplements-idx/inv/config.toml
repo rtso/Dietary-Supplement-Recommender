@@ -1,0 +1,17 @@
+prefix = "/Users/Peter/PycharmProjects/Dietary-Supplement-Recommender/MeTA-data"
+function-words = "../../../meta/data/function-words.txt"
+query-path = "queries.txt"
+stop-words = "../../../meta/data/lemur-stopwords.txt"
+libsvm-modules = "../../../meta/deps/libsvm-modules/"
+query-judgements = "qrel.txt"
+index = "supplements-idx"
+indexer-ram-budget = 1024
+punctuation = "../../../meta/data/sentence-boundaries/sentence-punctuation.txt"
+corpus = "line.toml"
+start-exceptions = "../../../meta/data/sentence-boundaries/sentence-start-exceptions.txt"
+end-exceptions = "../../../meta/data/sentence-boundaries/sentence-end-exceptions.txt"
+dataset = "supplements"
+[[analyzers]]
+	filter = "default-unigram-chain"
+	ngram = 1
+	method = "ngram-word"

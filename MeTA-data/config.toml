@@ -13,6 +13,9 @@ indexer-ram-budget = 1024 # **estimated** RAM budget for indexing in MB
                           # always set this lower than your physical RAM!
 # indexer-num-threads = 8 # default value is system thread concurrency
 
+query-judgements = "qrel.txt"
+query-path = "queries.txt"
+
 [[analyzers]]
 method = "ngram-word"
 ngram = 1
